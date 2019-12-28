@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- saved from url=(0020)http://127.0.0.1:81/ -->
+<html lang="zh" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex">
+<title>登录 - gMysqlAdminer</title>
+<link rel="stylesheet" type="text/css" href="../login_files/saved_resource">
+<script src="../login_files/saved_resource(1)" nonce=""></script>
+<link rel="shortcut icon" type="image/x-icon" href="http://127.0.0.1:81/?file=favicon.ico&amp;version=4.7.5">
+<link rel="apple-touch-icon" href="http://127.0.0.1:81/?file=favicon.ico&amp;version=4.7.5">
+
+</head><body class="ltr js">
+<script nonce="">
+mixin(document.body, {onkeydown: bodyKeydown, onclick: bodyClick});
+document.body.className = document.body.className.replace(/ nojs/, ' js');
+var offlineMessage = '您离线了。';
+var thousandsSeparator = ',';
+</script>
+
+<div id="help" class="jush-sql jsonly hidden"></div>
+<script nonce="">mixin(qs('#help'), {onmouseover: function () { helpOpen = 1; }, onmouseout: helpMouseout});</script>
+
+<div id="content">
+<h2>登录</h2>
+<div id="ajaxstatus" class="jsonly hidden"></div>
+<form action="./login" method="post">
+<div></div>
+<table cellspacing="0" class="layout">
+<tbody><tr><th>系统</th><td><select name="driver"><option value="server" selected="">MySQL</option></select><script nonce="">qsl('select').onchange = function () { loginDriver(this); };</script>
+</td></tr><tr class=""><th>服务器</th><td><input name="server" value="" title="hostname[:port]" placeholder="localhost" autocapitalize="off">
+</td></tr><tr><th>用户名</th><td><input name="username" id="username" value="" autocomplete="username" autocapitalize="off"><script nonce="">focus(qs('#username')); qs('#username').form['auth[driver]'].onchange();</script>
+</td></tr><tr><th>密码</th><td><input type="password" name="auth[password]" autocomplete="current-password">
+</td></tr><tr><th>数据库</th><td><input name="db" value="" autocapitalize="off">
+</td></tr></tbody></table>
+<p><input type="submit" value="登录" class="">
+<label><input type="checkbox" name="auth[permanent]" value="1">保持登录</label>
+</p></form>
+</div>
+
+<form action="http://127.0.0.1:81/" method="post">
+<div id="lang">语言: <select name="lang"><option value="en">English</option><option value="ar">العربية</option><option value="bg">Български</option><option value="bn">বাংলা</option><option value="bs">Bosanski</option><option value="ca">Català</option><option value="cs">Čeština</option><option value="da">Dansk</option><option value="de">Deutsch</option><option value="el">Ελληνικά</option><option value="es">Español</option><option value="et">Eesti</option><option value="fa">فارسی</option><option value="fi">Suomi</option><option value="fr">Français</option><option value="gl">Galego</option><option value="he">עברית</option><option value="hu">Magyar</option><option value="id">Bahasa Indonesia</option><option value="it">Italiano</option><option value="ja">日本語</option><option value="ka">ქართული</option><option value="ko">한국어</option><option value="lt">Lietuvių</option><option value="ms">Bahasa Melayu</option><option value="nl">Nederlands</option><option value="no">Norsk</option><option value="pl">Polski</option><option value="pt">Português</option><option value="pt-br">Português (Brazil)</option><option value="ro">Limba Română</option><option value="ru">Русский</option><option value="sk">Slovenčina</option><option value="sl">Slovenski</option><option value="sr">Српски</option><option value="sv">Svenska</option><option value="ta">த‌மிழ்</option><option value="th">ภาษาไทย</option><option value="tr">Türkçe</option><option value="uk">Українська</option><option value="vi">Tiếng Việt</option><option value="zh" selected="">简体中文</option><option value="zh-tw">繁體中文</option></select><script nonce="">qsl('select').onchange = function () { this.form.submit(); };</script> <input type="submit" value="使用" class="hidden">
+<input type="hidden" name="token" value="1010164:959569">
+</div>
+</form>
+<div id="menu">
+<h1>
+<a href="https://www.adminer.org/" target="_blank" rel="noreferrer noopener" id="h1">Adminer</a> <span class="version">4.7.5</span>
+<a href="https://www.adminer.org/#download" target="_blank" rel="noreferrer noopener" id="version"></a>
+</h1>
+</div>
+<script nonce="">setupSubmitHighlight(document);</script>
+</body></html>
